@@ -10,12 +10,12 @@
   ],
   "routes": [
     {
-      "src": "/scripts/(.*)",
-      "dest": "/src/dist/scripts/$1"
+      "src": "^/scripts/(.*)",   
+      "dest": "/dist/scripts/$1"
     },
     {
-      "src": "/(.*)",
-      "dest": "/src/$1"
+      "src": "/(.*)",           
+      "dest": "/$1"
     }
   ]
 }
