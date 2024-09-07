@@ -1,12 +1,42 @@
 "use strict";
-console.log("typescript is working incredible");
-document.addEventListener('DOMContentLoaded', () => {
+console.log("TypeScript is working incredibly well! 🚀");
+var VisibilityState;
+(function (VisibilityState) {
+    VisibilityState["Visible"] = "visible";
+    VisibilityState["Hidden"] = "hidden";
+})(VisibilityState || (VisibilityState = {}));
+// Function to handle visibility toggle with smooth animation
+const toggleVisibility = (element) => {
+    const { targetSection, state } = element;
+    if (state === VisibilityState.Visible) {
+        targetSection.classList.add('hidden');
+        element.state = VisibilityState.Hidden;
+    }
+    else {
+        targetSection.classList.remove('hidden');
+        element.state = VisibilityState.Visible;
+    }
+    // Provide some visual feedback on button click
+    element.toggleButton.classList.add('active');
+    setTimeout(() => element.toggleButton.classList.remove('active'), 150);
+};
+// Main initialization function
+const initToggleSkillsFeature = () => {
     const skillsSection = document.getElementById('skills');
     const toggleButton = document.getElementById('toggle-skills');
-    if (toggleButton && skillsSection) {
-        toggleButton.addEventListener('click', () => {
-            skillsSection.classList.toggle('hidden');
-        });
+    if (!toggleButton || !skillsSection) {
+        console.error("Required elements are missing!");
+        return;
     }
-});
+    // Initialize with default visible state
+    const toggleableElement = {
+        toggleButton,
+        targetSection: skillsSection,
+        state: VisibilityState.Visible,
+    };
+    // Event listener to toggle visibility
+    toggleButton.addEventListener('click', () => toggleVisibility(toggleableElement));
+};
+// Ensure the DOM is fully loaded before initializing
+document.addEventListener('DOMContentLoaded', initToggleSkillsFeature);
 //# sourceMappingURL=main.js.map

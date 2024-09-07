@@ -5,7 +5,7 @@
         "src": "src/index.html",
         "use": "@vercel/static-build",
         "config": {
-          "buildCommand": "npx tsc && mv src/main.js public/"
+          "buildCommand": "npx tsc && mv src/scripts/main.js public/"
         }
       }
     ]

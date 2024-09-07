@@ -1,7 +1,8 @@
+/* General Styles */
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
     color: #333;
     display: flex;
     justify-content: center;
@@ -9,12 +10,13 @@ body {
     min-height: 100vh;
 }
 
+/* Resume Container */
 .resume-container {
     width: 90%;
     max-width: 800px;
     background-color: #ffffff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease;
 }
@@ -23,28 +25,34 @@ body {
     transform: scale(1.02);
 }
 
+/* Header Section */
 .header {
     background-color: #0077b6;
     color: #ffffff;
     padding: 20px;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 
 .header h1 {
     margin: 0;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+    font-weight: 700;
 }
 
 .header p {
     margin: 5px 0 0;
     font-style: italic;
     font-size: 1rem;
+    font-weight: 300;
 }
 
+/* Personal Info Section */
 .personal-info {
     display: flex;
     align-items: center;
     padding: 20px;
+    border-bottom: 1px solid #ddd;
 }
 
 .profile-pic {
@@ -52,16 +60,29 @@ body {
     width: 100px;
     height: 100px;
     margin-right: 20px;
+    border: 2px solid #0077b6;
 }
 
 .contact-details p {
     margin: 5px 0;
+    font-size: 0.95rem;
 }
 
+/* Section Styling */
 .section {
     padding: 20px;
 }
 
+.section h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #023e8a;
+    border-bottom: 2px solid #0077b6;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Skills Section */
 .skills-section {
     transition: max-height 0.5s ease-out, padding 0.5s ease-out;
     max-height: 600px;
@@ -83,17 +104,20 @@ body {
 
 .skills-list li {
     background-color: #f1f1f1;
-    padding: 8px;
+    padding: 10px;
     border-radius: 5px;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
+    font-weight: 500;
 }
 
 .skills-list li:hover {
-    background-color: #e0f7fa;
+    background-color: #00b4d8;
+    color: #fff;
 }
 
+/* Navigation */
 .navigation {
     display: flex;
     justify-content: center;
@@ -110,6 +134,7 @@ body {
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Poppins', sans-serif;
 }
 
 .toggle-btn:hover {
@@ -117,12 +142,18 @@ body {
     transform: translateY(-2px);
 }
 
+.toggle-btn.active {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
 /* Media Queries for Responsive Design */
 
 /* For tablets and larger screens */
 @media (min-width: 768px) {
     .header h1 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
 
     .toggle-btn {
@@ -142,7 +173,7 @@ body {
     }
 
     .header h1 {
-        font-size: 3rem;
+        font-size: 3.2rem;
     }
 
     .skills-list li {
@@ -157,7 +188,7 @@ body {
     }
 
     .header h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .header p {
@@ -177,7 +208,7 @@ body {
 /* For small mobile screens */
 @media (max-width: 480px) {
     .header h1 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     .skills-list {
