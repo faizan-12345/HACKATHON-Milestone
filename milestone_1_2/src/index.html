@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <div class="resume-container">
+        <div class="header">
+            <h1>John Doe</h1>
+            <p>Full Stack Developer | john.doe@example.com | (123) 456-7890</p>
+        </div>
+
+        <div class="personal-info">
+            <img src="./assets/sample-profile-pic.png" alt="Profile Picture" class="profile-pic">
+            <div class="contact-details">
+                <p><strong>Email:</strong> john.doe@example.com</p>
+                <p><strong>Phone:</strong> (123) 456-7890</p>
+                <p><strong>LinkedIn:</strong> linkedin.com/in/johndoe</p>
+            </div>
+        </div>
+
+        <div class="section education">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>Master of Science in Computer Science</strong> - ABC University (2020 - 2022)</li>
+                <li><strong>Bachelor of Science in Information Technology</strong> - XYZ University (2016 - 2020)</li>
+            </ul>
+        </div>
+
+        <div class="section skills-section" id="skills">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>HTML & CSS</li>
+                <li>SQL</li>
+            </ul>
+        </div>
+
+        <div class="navigation">
+            <button id="toggle-skills" class="toggle-btn">Toggle Skills</button>
+        </div>
+
+        <div class="section work-experience">
+            <h2>Work Experience</h2>
+            <ul>
+                <li>
+                    <strong>Senior Developer</strong> - Tech Company Inc. (2022 - Present)
+                    <p>Developed and maintained web applications, leading a team of 5 developers.</p>
+                </li>
+                <li>
+                    <strong>Junior Developer</strong> - Web Solutions (2020 - 2022)
+                    <p>Worked on various projects involving frontend and backend development.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="../dist/scripts/main.js"></script>
+</body>
+</html>

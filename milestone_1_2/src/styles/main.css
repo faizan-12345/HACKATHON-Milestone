@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.resume-container {
+    width: 90%;
+    max-width: 800px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.resume-container:hover {
+    transform: scale(1.02);
+}
+
+.header {
+    background-color: #0077b6;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+.header p {
+    margin: 5px 0 0;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+.personal-info {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.contact-details p {
+    margin: 5px 0;
+}
+
+.section {
+    padding: 20px;
+}
+
+.skills-section {
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.skills-section.hidden {
+    max-height: 0;
+    padding: 0 20px;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.skills-list li {
+    background-color: #f1f1f1;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.skills-list li:hover {
+    background-color: #e0f7fa;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #023e8a;
+}
+
+.toggle-btn {
+    background-color: #0096c7;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #00b4d8;
+    transform: translateY(-2px);
+}
+
+/* Media Queries for Responsive Design */
+
+/* For tablets and larger screens */
+@media (min-width: 768px) {
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .toggle-btn {
+        font-size: 1.1rem;
+        padding: 12px 24px;
+    }
+
+    .skills-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+/* For large desktops */
+@media (min-width: 1024px) {
+    .resume-container {
+        max-width: 1000px;
+    }
+
+    .header h1 {
+        font-size: 3rem;
+    }
+
+    .skills-list li {
+        padding: 12px;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 767px) {
+    .resume-container {
+        width: 95%;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .header p {
+        font-size: 0.9rem;
+    }
+
+    .toggle-btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .skills-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* For small mobile screens */
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-list li {
+        padding: 6px;
+    }
+}

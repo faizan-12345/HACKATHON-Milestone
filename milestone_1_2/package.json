@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  },
+"scripts": {
+  "build": "tsc && powershell -Command \"Get-ChildItem -Path .\\dist\\scripts\""
+}
+
+
+}
+
