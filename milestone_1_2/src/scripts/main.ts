@@ -12,6 +12,11 @@ interface ToggleableElement {
     state: VisibilityState;
 }
 
+// Function to determine the initial visibility state based on the element's classes
+const getInitialVisibilityState = (element: HTMLElement): VisibilityState => {
+    return element.classList.contains('hidden') ? VisibilityState.Hidden : VisibilityState.Visible;
+};
+
 // Function to handle visibility toggle with smooth animation
 const toggleVisibility = (element: ToggleableElement): void => {
     const { targetSection, state } = element;
@@ -39,11 +44,11 @@ const initToggleSkillsFeature = (): void => {
         return;
     }
 
-    // Initialize with default visible state
+    // Initialize with the correct state based on the current visibility of the skills section
     const toggleableElement: ToggleableElement = {
         toggleButton,
         targetSection: skillsSection,
-        state: VisibilityState.Visible,
+        state: getInitialVisibilityState(skillsSection),
     };
 
     // Event listener to toggle visibility
