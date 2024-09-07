@@ -1,5 +1,5 @@
 "use strict";
-console.log("typescript is working great");
+console.log("typescript is working incredible");
 document.addEventListener('DOMContentLoaded', () => {
     const skillsSection = document.getElementById('skills');
     const toggleButton = document.getElementById('toggle-skills');
