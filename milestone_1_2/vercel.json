@@ -4,14 +4,14 @@
       "src": "src/index.html",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "src"
+        "distDir": "src"  
       }
     }
   ],
   "routes": [
     {
-      "src": "/dist/(.*)",
-      "dest": "/src/dist/$1"
+      "src": "/scripts/(.*)",
+      "dest": "/src/dist/scripts/$1"
     },
     {
       "src": "/(.*)",
