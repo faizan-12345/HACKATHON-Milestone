@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "tsc && cp -R src/dist build/",
+    "build": "tsc",
     "start": "serve src"  
   }
 }
