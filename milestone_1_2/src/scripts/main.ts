@@ -1,4 +1,4 @@
-console.log("typescript is working fine");
+console.log("typescript is working great");
 
 document.addEventListener('DOMContentLoaded', () => {
     const skillsSection = document.getElementById('skills');
