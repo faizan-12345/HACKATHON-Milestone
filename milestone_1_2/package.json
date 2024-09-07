@@ -1,6 +1,9 @@
 {
   "scripts": {
     "build": "tsc --outDir dist/scripts",
-    "start": "serve src"  
+    "start": "serve src"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
   }
 }
