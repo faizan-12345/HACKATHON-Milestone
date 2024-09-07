@@ -1,12 +1,6 @@
 {
-  "devDependencies": {
-    "typescript": "^5.5.4"
-  },
-"scripts": {
-  "build": "tsc"
+  "scripts": {
+    "build": "tsc && cp -R src/dist build/",
+    "start": "serve src"  
+  }
 }
-
-
-
-}
-
