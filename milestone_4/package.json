@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build": "tsc --version 5.5.4 && tsc",
+    "start": "serve dist"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}
