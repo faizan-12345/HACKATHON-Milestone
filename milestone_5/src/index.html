@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 Build Your Resume</h1>
+            <p>Fill out the form to generate your personalized resume.</p>
+        </header>
+
+        <!-- Progress Indicator -->
+        <div class="progress-bar">
+            <div class="step active">1</div>
+            <div class="step">2</div>
+            <div class="step">3</div>
+            <div class="step">4</div>
+        </div>
+
+        <!-- Form with Steps -->
+        <form id="resume-form">
+            <section class="form-step active" id="step-1">
+                <h2>👤 Personal Information</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                <p class="error-message"></p>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                <p class="error-message"></p>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="+123456789" required>
+                <p class="error-message"></p>
+
+                <button type="button" class="next-button">Next ➡️</button>
+            </section>
+
+            <section class="form-step" id="step-2">
+                <h2>🎓 Education</h2>
+                <div class="education-section">
+                    <label for="degree">Degree:</label>
+                    <input type="text" id="degree" name="degree" placeholder="B.Sc. in Computer Science" required>
+
+                    <label for="university">University:</label>
+                    <input type="text" id="university" name="university" placeholder="Harvard University" required>
+
+                    <label for="graduation-year">Year of Graduation:</label>
+                    <input type="number" id="graduation-year" name="graduation-year" placeholder="2024" required>
+                </div>
+
+                <button type="button" id="add-education">+ Add More Education</button>
+                <button type="button" class="prev-button">⬅️ Back</button>
+                <button type="button" class="next-button">Next ➡️</button>
+            </section>
+
+            <section class="form-step" id="step-3">
+                <h2>💼 Work Experience</h2>
+                <div class="work-experience-section">
+                    <label for="job-title">Job Title:</label>
+                    <input type="text" id="job-title" name="job-title" placeholder="Software Developer" required>
+
+                    <label for="company">Company:</label>
+                    <input type="text" id="company" name="company" placeholder="Google" required>
+
+                    <label for="job-duration">Duration:</label>
+                    <input type="text" id="job-duration" name="job-duration" placeholder="Jan 2020 - Present" required>
+                </div>
+
+                <button type="button" id="add-work-experience">+ Add More Experience</button>
+                <button type="button" class="prev-button">⬅️ Back</button>
+                <button type="button" class="next-button">Next ➡️</button>
+            </section>
+
+            <section class="form-step" id="step-4">
+                <h2>🛠️ Skills</h2>
+                <input type="text" id="skills" name="skills" placeholder="JavaScript, TypeScript, React" required>
+
+                <button type="button" class="prev-button">⬅️ Back</button>
+                <button type="submit" class="submit-button">Generate Resume 📄</button>
+            </section>
+        </form>
+
+        <footer>
+            <p>Created with ❤️ by Muhammad Faizan</p>
+        </footer>
+    </div>
+
+    <script src="./scripts/main.js" type="module"></script>
+</body>
+</html>

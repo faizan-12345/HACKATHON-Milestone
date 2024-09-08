@@ -1,0 +1,12 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "src/index.html",
+        "use": "@vercel/static-build",
+        "config": {
+          "buildCommand": "npx tsc && mv src/scripts/main.js public/"
+        }
+      }
+    ]
+  }

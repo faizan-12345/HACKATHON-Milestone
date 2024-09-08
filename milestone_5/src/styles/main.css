@@ -1,0 +1,177 @@
+/* Basic Styling and Layout */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #007bff;
+}
+
+/* Progress Bar */
+.progress-bar {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.step {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ddd;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.step.active {
+    background-color: #007bff;
+}
+
+/* Form Steps */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-step {
+    display: none;
+    animation: fadeIn 0.5s forwards;
+}
+
+.form-step.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+label {
+    margin-top: 10px;
+}
+
+input {
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: calc(100% - 18px);
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Error Message Styling */
+.error-message {
+    color: #ff0000;
+    font-size: 0.875em;
+    margin-top: 5px;
+}
+input.invalid {
+    border-color: #ff0000;
+    outline: none;
+}
+
+input.invalid:focus {
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    input {
+        width: calc(100% - 16px);
+    }
+
+    button {
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+
+    .progress-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .step {
+        width: 30px;
+        height: 30px;
+    }
+
+    input {
+        width: calc(100% - 14px);
+        font-size: 14px;
+    }
+
+    button {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+}
+
+input.invalid {
+    border-color: #ff0000;
+    outline: none;
+}
+
+input.invalid:focus {
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
